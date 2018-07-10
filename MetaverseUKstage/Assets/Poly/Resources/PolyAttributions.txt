@@ -1,0 +1,13 @@
+This project uses the following items from Poly (http://poly.google.com):
+
+Title: street scene
+Author: Ryan C
+URL: https://poly.google.com/view/5CjgRvFFELU
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: World Tree
+Author: Steve Teeple
+URL: https://poly.google.com/view/5FgoL475CBA
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
