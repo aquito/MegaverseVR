@@ -3,16 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StageManager : MonoBehaviour {
+public class StageManager : Singleton<StageManager> {
 
+	// private static StageManager instance; // making the scene manager a singleton - enables access via StageManager.instance.LoadLevel etc
+
+	public GameObject[] SystemPrefabs; // array that can be accessed via inspector; list of prefabs that are meant to be created
+
+	private List<GameObject> _instancedSystemPrefabs; // instantiated prefabs that the manager object needs to keep tarck of
 	private string _currentLevelName = string.Empty;
 
 
+/*	private void Awake() // inherited from singleton class therefore commented out
+	{
+		if(instance == null)
+		{
+			instance = this; // if there yet isn't a single instance, set it to this
+		}
+		else
+		{
+			Destroy(gameObject);
+			Debug.LogError("StageManager instantiated multiple times!");
+		}
+	}
+*/
 	private void Start()
 	{
 		DontDestroyOnLoad(gameObject);
 
-		LoadLevel("SampleScene");
+		_instancedSystemPrefabs = new List<GameObject>();
+
+		InstantiateSystemPrefabs();
+
+		// LoadLevel("SampleScene");
+	}
+
+	void InstantiateSystemPrefabs()
+	{
+		GameObject prefabInstance;
+
+		for(int i = 0; i < SystemPrefabs.Length; i++)
+		{
+			prefabInstance = Instantiate(SystemPrefabs[i]);
+			_instancedSystemPrefabs.Add(prefabInstance);
+		}
 	}
 	
 	void OnLoadOperationComplete(AsyncOperation ao)
@@ -51,5 +84,17 @@ public class StageManager : MonoBehaviour {
 		}
 
 		ao.completed += OnUnloadOperationComplete;
+	}
+
+	protected override void OnDestroy()
+	{
+		base.OnDestroy();
+
+		for(int i = 0; i < _instancedSystemPrefabs.Count; i++)
+		{
+			Destroy(_instancedSystemPrefabs[i]);		
+		}
+
+		_instancedSystemPrefabs.Clear();
 	}
 }
