@@ -76,7 +76,7 @@ public class StageManager : Singleton<StageManager> {
 
 	public void LoadLevel(string levelName)
 	{
-		ClearStage();
+		// ClearStage();
 
 		AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive); // additive scene load so that this manager remains in memory
 		
