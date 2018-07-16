@@ -52,7 +52,7 @@ LightmapSettings:
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 1
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 9
     m_Resolution: 2
@@ -862,11 +862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SystemPrefabs:
-  - {fileID: 1099121384614018, guid: b592438b1b9c8384e8fadfc263408269, type: 2}
-  - {fileID: 1165130661264424, guid: d94e1774debf0ff42b7631016e759ce1, type: 2}
-  - {fileID: 1683817731316994, guid: ea6373a10e3263848bbd50afb2f6c9d2, type: 2}
-  - {fileID: 1761725369183090, guid: a1158fabc4fcb514680284badc14d92b, type: 2}
   - {fileID: 1900196665720878, guid: 06088c13a589b2b44a7e1ab97f37968c, type: 2}
+  - {fileID: 1165130661264424, guid: d94e1774debf0ff42b7631016e759ce1, type: 2}
 --- !u!4 &199489548
 Transform:
   m_ObjectHideFlags: 0
@@ -1936,17 +1933,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 199489547}
-        m_MethodName: UnloadLevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: _currentLevelName
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 199489547}
         m_MethodName: LoadLevel
         m_Mode: 5

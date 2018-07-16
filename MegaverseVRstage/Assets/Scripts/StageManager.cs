@@ -10,6 +10,16 @@ public class StageManager : Singleton<StageManager> {
 	public GameObject[] SystemPrefabs; // array that can be accessed via inspector; list of prefabs that are meant to be created
 
 	private List<GameObject> _instancedSystemPrefabs; // instantiated prefabs that the manager object needs to keep tarck of
+
+	private List<GameObject> sceneLights;
+	private List<GameObject> scenePerformers;
+
+	private List<GameObject> sceneAssets;
+
+	private List<GameObject> sceneAudio;
+
+	private List<GameObject> _instancedScenePrefabs;
+
 	private string _currentLevelName = string.Empty;
 
 
@@ -32,7 +42,13 @@ public class StageManager : Singleton<StageManager> {
 
 		_instancedSystemPrefabs = new List<GameObject>();
 
+		_instancedScenePrefabs = new List<GameObject>();
+
+		sceneLights = new List<GameObject>();
+
 		InstantiateSystemPrefabs();
+
+
 
 		// LoadLevel("SampleScene");
 	}
@@ -60,6 +76,8 @@ public class StageManager : Singleton<StageManager> {
 
 	public void LoadLevel(string levelName)
 	{
+		ClearStage();
+
 		AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive); // additive scene load so that this manager remains in memory
 		
 		if(ao == null)
@@ -70,6 +88,8 @@ public class StageManager : Singleton<StageManager> {
 
 		ao.completed += OnLoadOperationComplete;
 		_currentLevelName = levelName;
+
+		BuildLights();
 	}
 
 
@@ -96,5 +116,96 @@ public class StageManager : Singleton<StageManager> {
 		}
 
 		_instancedSystemPrefabs.Clear();
+	}
+
+	public void BuildLights() // called after new scene loaded
+	{
+		GameObject sceneLightInstance;
+
+		if(sceneLights != null) // checking if there are any lights in the scene
+		{
+			for(int i = 0; i < _instancedScenePrefabs.Count; i++)
+			{
+				if(_instancedScenePrefabs[i].gameObject.tag == "Light")
+				{
+					Destroy(_instancedScenePrefabs[i]);	
+				}
+					
+			}
+
+			foreach(GameObject light in GameObject.FindGameObjectsWithTag("Light"))
+			{
+				sceneLightInstance = Instantiate(light);
+				sceneLights.Add(sceneLightInstance);	
+				_instancedScenePrefabs.Add(sceneLightInstance);
+			}
+
+			Debug.Log(sceneLights.Count + " lights built for the stage");
+		}
+
+		
+
+	}
+
+	
+	public void BuildPerformers() // called after new scene loaded
+	{
+		GameObject scenePerformerInstance;
+
+		if(scenePerformers != null) // checking if there are any lights in the scene
+		{
+
+			for(int i = 0; i < scenePerformers.Count; i++)
+			{
+				scenePerformerInstance = Instantiate(scenePerformers[i]);
+				_instancedScenePrefabs.Add(scenePerformerInstance);
+			}
+		}
+
+	}
+
+	public void BuildAssets() // called after new scene loaded
+	{
+		GameObject sceneAssetInstance;
+
+		if(sceneAssets != null) // checking if there are any lights in the scene
+		{
+			for(int i = 0; i < sceneAssets.Count; i++)
+			{
+				sceneAssetInstance = Instantiate(sceneAudio[i]);
+				_instancedScenePrefabs.Add(sceneAssetInstance);
+			}
+		}
+
+	}
+
+	public void BuildAudio() // called after new scene loaded
+	{
+		GameObject sceneAudioInstance;
+
+		if(sceneAudio != null) // checking if there are any lights in the scene
+		{
+			for(int i = 0; i < sceneAudio.Count; i++)
+			{
+				sceneAudioInstance = Instantiate(sceneAssets[i]);
+				_instancedScenePrefabs.Add(sceneAudioInstance);
+			}
+		}
+
+	}
+
+	public void ClearStage() // clear all the scene prefabs before loading new scene
+	{
+		
+		// if(_instancedScenePrefabs != null)
+		// {
+			for(int i = 0; i < _instancedScenePrefabs.Count; i++)
+			{
+				Destroy(_instancedScenePrefabs[i]);		
+			}
+		//}
+		
+
+		_instancedScenePrefabs.Clear();
 	}
 }
