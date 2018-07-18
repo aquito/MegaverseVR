@@ -20,6 +20,8 @@ public class StageManager : Singleton<StageManager> {
 
 	private List<GameObject> _instancedScenePrefabs;
 
+	GameObject sceneObject;
+
 	private string _currentLevelName = string.Empty;
 
 
@@ -76,7 +78,7 @@ public class StageManager : Singleton<StageManager> {
 
 	public void LoadLevel(string levelName)
 	{
-		// ClearStage();
+		
 
 		AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive); // additive scene load so that this manager remains in memory
 		
@@ -89,6 +91,8 @@ public class StageManager : Singleton<StageManager> {
 		ao.completed += OnLoadOperationComplete;
 		_currentLevelName = levelName;
 
+		ClearStage(); 
+		
 		BuildLights();
 	}
 
@@ -120,27 +124,25 @@ public class StageManager : Singleton<StageManager> {
 
 	public void BuildLights() // called after new scene loaded
 	{
+
 		GameObject sceneLightInstance;
+
+		GameObject sceneObject = GameObject.FindGameObjectWithTag("SceneObjects");
 
 		if(sceneLights != null) // checking if there are any lights in the scene
 		{
-			for(int i = 0; i < _instancedScenePrefabs.Count; i++)
-			{
-				if(_instancedScenePrefabs[i].gameObject.tag == "Light")
-				{
-					Destroy(_instancedScenePrefabs[i]);	
-				}
-					
-			}
-
+			
 			foreach(GameObject light in GameObject.FindGameObjectsWithTag("Light"))
 			{
 				sceneLightInstance = Instantiate(light);
+				sceneLightInstance.transform.SetParent(sceneObject.transform);
+				Debug.Log("Set " + light.name + " as child of " + sceneObject);
 				sceneLights.Add(sceneLightInstance);	
 				_instancedScenePrefabs.Add(sceneLightInstance);
 			}
 
 			Debug.Log(sceneLights.Count + " lights built for the stage");
+
 		}
 
 		
@@ -196,7 +198,23 @@ public class StageManager : Singleton<StageManager> {
 
 	public void ClearStage() // clear all the scene prefabs before loading new scene
 	{
-		
+		// if(sceneObjects != null)
+		//{ 
+			foreach(GameObject sceneObject in GameObject.FindGameObjectsWithTag("SceneObjects"))
+			{
+				if(sceneObject.transform.childCount > 0)
+				{
+					Debug.Log("Destroyed " + sceneObject.name + " on level ");
+					Destroy(sceneObject);
+				}
+				
+			}
+			
+				
+			
+			
+			
+		//} 
 		// if(_instancedScenePrefabs != null)
 		// {
 			for(int i = 0; i < _instancedScenePrefabs.Count; i++)

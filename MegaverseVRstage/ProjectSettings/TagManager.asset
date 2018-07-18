@@ -8,6 +8,7 @@ TagManager:
   - Performer
   - Asset
   - Audio
+  - SceneObjects
   layers:
   - Default
   - TransparentFX

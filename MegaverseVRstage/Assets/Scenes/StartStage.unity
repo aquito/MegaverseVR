@@ -865,6 +865,7 @@ MonoBehaviour:
   - {fileID: 1900196665720878, guid: 06088c13a589b2b44a7e1ab97f37968c, type: 2}
   - {fileID: 1165130661264424, guid: d94e1774debf0ff42b7631016e759ce1, type: 2}
   - {fileID: 1099121384614018, guid: b592438b1b9c8384e8fadfc263408269, type: 2}
+  - {fileID: 1835516521927224, guid: 5e77d6c955cb7444daf061ff9b7ea4d3, type: 2}
 --- !u!4 &199489548
 Transform:
   m_ObjectHideFlags: 0
@@ -1934,17 +1935,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 199489547}
-        m_MethodName: ClearStage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 199489547}
         m_MethodName: LoadLevel
         m_Mode: 5
@@ -3347,17 +3337,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 199489547}
-        m_MethodName: UnloadLevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: _currentLevelName
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 199489547}
         m_MethodName: LoadLevel
         m_Mode: 5
