@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 33448628053791738}
   - component: {fileID: 114287646564569260}
   - component: {fileID: 64656563856678410}
+  - component: {fileID: 114435631997381562}
   m_Layer: 0
   m_Name: Dome
   m_TagString: Untagged
@@ -56,9 +57,9 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 96999105ce6c19449ac9577028ddd65d, type: 2}
+  - {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14705,3 +14706,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!114 &114435631997381562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099121384614018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 666c1f5d62bf3e049b108906fda12b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 537db0387b31e004888533b91562f23d, type: 2}
+  - {fileID: 2100000, guid: 537db0387b31e004888533b91562f23d, type: 2}
+  - {fileID: 2100000, guid: ebe4c4773b62ce143aaae6954d9120a8, type: 2}
