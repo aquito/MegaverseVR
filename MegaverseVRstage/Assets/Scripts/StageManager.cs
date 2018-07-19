@@ -17,6 +17,9 @@ public class StageManager : Singleton<StageManager> {
 	private List<GameObject> _instancedSystemPrefabs; // instantiated prefabs that the manager object needs to keep tarck of
 
 	GameObject vrtk;
+
+	GameObject recording;
+
 	private string _currentStageName = string.Empty;
 
 	int numberOfScenes; 
@@ -39,7 +42,11 @@ public class StageManager : Singleton<StageManager> {
 
 		vrtk = GameObject.Find("VRTK");
 
+		recording = GameObject.Find("MimesysClient");
+
 		DontDestroyOnLoad(vrtk);
+
+		DontDestroyOnLoad(recording);
 
 		InstantiateSystemPrefabs();
 	}
