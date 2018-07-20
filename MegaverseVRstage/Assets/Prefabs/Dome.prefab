@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 33448628053791738}
   - component: {fileID: 114287646564569260}
   - component: {fileID: 64656563856678410}
-  - component: {fileID: 114435631997381562}
+  - component: {fileID: 114191742261572786}
   m_Layer: 0
   m_Name: Dome
   m_TagString: Untagged
@@ -100,6 +100,22 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!114 &114191742261572786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099121384614018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6debb27af07851747a9e3f7aa86d6e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  options:
+  - {fileID: 2100000, guid: 537db0387b31e004888533b91562f23d, type: 2}
+  - {fileID: 2100000, guid: dbe67030c5172ad448bc4afa743fa6fe, type: 2}
+  - {fileID: 2100000, guid: 9aed905815966de43a7175558b38c69d, type: 2}
+  keyboardKey: m
 --- !u!114 &114287646564569260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14706,18 +14722,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!114 &114435631997381562
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099121384614018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 666c1f5d62bf3e049b108906fda12b9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: 537db0387b31e004888533b91562f23d, type: 2}
-  - {fileID: 2100000, guid: 537db0387b31e004888533b91562f23d, type: 2}
-  - {fileID: 2100000, guid: ebe4c4773b62ce143aaae6954d9120a8, type: 2}

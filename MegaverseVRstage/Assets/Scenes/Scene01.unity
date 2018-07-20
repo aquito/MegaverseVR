@@ -1549,6 +1549,10 @@ Prefab:
       propertyPath: materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
+    - target: {fileID: 1099121384614018, guid: b592438b1b9c8384e8fadfc263408269, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b592438b1b9c8384e8fadfc263408269, type: 2}
   m_IsPrefabParent: 0
@@ -1923,7 +1927,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-12876
+  m_Name: pb_Mesh-220652
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

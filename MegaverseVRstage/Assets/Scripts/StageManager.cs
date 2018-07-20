@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class StageManager : Singleton<StageManager> {
 
-	// private static StageManager instance; // making the scene manager a singleton - enables access via StageManager.instance.LoadLevel etc
-
-
-	// public List<Scene> stageScenes;
-
 
 	public Object[] stages; // NOTE that Objects only works on Unity Editor so if you want to make a build this solution would not work (you'd need to define an order of scenes for the build)
 
@@ -18,7 +13,7 @@ public class StageManager : Singleton<StageManager> {
 
 	GameObject vrtk;
 
-	GameObject recording;
+	// GameObject recording;
 
 	private string _currentStageName = string.Empty;
 
@@ -42,11 +37,11 @@ public class StageManager : Singleton<StageManager> {
 
 		vrtk = GameObject.Find("VRTK");
 
-		recording = GameObject.Find("MimesysClient");
+		// recording = GameObject.Find("MimesysClient");
 
 		DontDestroyOnLoad(vrtk);
 
-		DontDestroyOnLoad(recording);
+		// DontDestroyOnLoad(recording);
 
 		InstantiateSystemPrefabs();
 	}

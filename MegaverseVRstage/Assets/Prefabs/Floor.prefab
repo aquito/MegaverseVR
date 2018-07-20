@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 33781631277896872}
   - component: {fileID: 114619886594104110}
   - component: {fileID: 64170576536332968}
+  - component: {fileID: 114013016882161908}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -56,9 +57,9 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d9529e5fff711e4fb3a5fca62a3d65b, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -66,7 +67,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
+  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
@@ -99,6 +100,20 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!114 &114013016882161908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165130661264424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6debb27af07851747a9e3f7aa86d6e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  options:
+  - {fileID: 2100000, guid: 116e3097d2ce4e943a42ebd0526674ad, type: 2}
+  keyboardKey: f
 --- !u!114 &114619886594104110
 MonoBehaviour:
   m_ObjectHideFlags: 1

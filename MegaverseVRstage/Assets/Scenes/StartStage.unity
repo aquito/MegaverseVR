@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.029682526, g: 0.043165993, b: 0.03241121, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 56ce4fdaa76612a409705dd9b965a6b2,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -175,6 +176,11 @@ Prefab:
     - target: {fileID: 1806134074603596, guid: 45f0949b4ed52314d8ef5c734de6eebd, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114775346252459488, guid: 45f0949b4ed52314d8ef5c734de6eebd,
+        type: 2}
+      propertyPath: _trackingOriginType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f0949b4ed52314d8ef5c734de6eebd, type: 2}
@@ -392,7 +398,7 @@ MonoBehaviour:
   virtualGreenScreenBottomY: -10
   virtualGreenScreenApplyDepthCulling: 0
   virtualGreenScreenDepthTolerance: 0.2
-  _trackingOriginType: 1
+  _trackingOriginType: 0
   usePositionTracking: 1
   useRotationTracking: 1
   useIPDInPositionTracking: 1
@@ -446,7 +452,7 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 9a7af30204d35b8419d00c0a7f802c8f, type: 3}
   SystemPrefabs:
   - {fileID: 1099121384614018, guid: b592438b1b9c8384e8fadfc263408269, type: 2}
-  - {fileID: 1165130661264424, guid: d94e1774debf0ff42b7631016e759ce1, type: 2}
+  - {fileID: 1165130661264424, guid: 72766c7d0e1406040bc6bd8a2d48106e, type: 2}
   - {fileID: 1761725369183090, guid: a1158fabc4fcb514680284badc14d92b, type: 2}
   - {fileID: 1683817731316994, guid: ea6373a10e3263848bbd50afb2f6c9d2, type: 2}
 --- !u!4 &199489548
@@ -721,69 +727,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 388780292}
---- !u!1001 &524595214
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4720810931755492, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720810931755492, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720810931755492, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720810931755492, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720810931755492, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720810931755492, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720810931755492, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720810931755492, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114123907594557746, guid: 7909c2d829eb8bc46913c2f4eb1d781b,
-        type: 2}
-      propertyPath: CameraServer
-      value: 10.67.107.205
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7909c2d829eb8bc46913c2f4eb1d781b, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &524595215 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1436324509966200, guid: 7909c2d829eb8bc46913c2f4eb1d781b,
-    type: 2}
-  m_PrefabInternal: {fileID: 524595214}
---- !u!114 &524595216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 524595215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c06e75a701a24994f830ba777bc2e58c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &540023574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,8 +1632,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114435631997381562, guid: b592438b1b9c8384e8fadfc263408269,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: ChangeToDark
         m_Mode: 1
         m_Arguments:
@@ -3316,8 +3258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114435631997381562, guid: b592438b1b9c8384e8fadfc263408269,
-          type: 2}
+      - m_Target: {fileID: 0}
         m_MethodName: ChangeToLight
         m_Mode: 1
         m_Arguments:
