@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23571131210758452}
   - component: {fileID: 114837467072261302}
   - component: {fileID: 64699207036577866}
+  - component: {fileID: 114219454491185726}
   m_Layer: 0
   m_Name: MimesysHologramRenderer
   m_TagString: Untagged
@@ -208,6 +209,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114219454491185726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604866461620612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d365ec171987714395e3b74e8e390a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  options:
+  - {fileID: 4800000, guid: 9dee2c7d42409d049bcb02ed28ce6715, type: 3}
+  - {fileID: 4800000, guid: bc4d63092be97d546b286a9ba2202bdf, type: 3}
+  - {fileID: 4800000, guid: f0b550e47206ff4498a3c8d14e4a6e40, type: 3}
+  keyboardKey: s
 --- !u!114 &114837467072261302
 MonoBehaviour:
   m_ObjectHideFlags: 1

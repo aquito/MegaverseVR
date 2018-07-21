@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4122706443664346}
   - component: {fileID: 114379661334659066}
+  - component: {fileID: 114653847045837972}
   m_Layer: 0
   m_Name: MimesysRecording
   m_TagString: Untagged
@@ -58,15 +59,28 @@ MonoBehaviour:
   FileName: 
   Loop: 0
   CalculateNormals: 0
+  PlayOnStart: 0
   State: 0
   DownloadProgress: 0
   onPlaybackStopped:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onPlaybackStarted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114653847045837972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173227787067608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9cd6c1116abfdb4cb0eb6acd6f641c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Q4dUrl: http://s3-eu-west-1.amazonaws.com/mimesys-repository-artifacts/q4d/TNMC-Solo+Jan.15.q4d
